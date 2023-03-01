@@ -9,8 +9,21 @@ HighchartsOrganization(Highcharts);
 
 Highcharts.chart('container', {
     chart: {
-        height: 600, //Make customizable
-        inverted: true //Make customizable
+        height: 2000, //Make customizable
+        inverted: true, //Make customizable
+        events: {
+            click: function() {
+            },
+            load: function() {
+                this.reflow();
+            },
+            render: function() {
+            },
+            redraw: function() {
+            },
+            selection: function() {
+            },
+        },
     },
 
     title: {
@@ -63,5 +76,6 @@ Highcharts.chart('container', {
 
 });
 
-
-console.log('Processboard'); 
+setInterval(function () {
+    Highcharts.charts[0].reflow();
+}, 2000);
