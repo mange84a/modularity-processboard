@@ -1,0 +1,13 @@
+.modularity-mod-processboard {
+    #chart_responsive {
+        overflow-x: scroll;
+        #container {
+            min-width: 600px;
+        }
+    }
+    .highcharts-label {
+        border: 1px solid rgba(0,0,0,.2);
+        border-top: 5px solid var(--color-primary);
+        box-shadow: 0px 7px 12px rgba(0,0,0,.3);
+    }
+}

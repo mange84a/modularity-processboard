@@ -1,8 +1,8 @@
 <?php
 
-namespace {{BPREPLACENAMESPACE}};
+namespace Processboard;
 
-use {{BPREPLACENAMESPACE}}\Helper\CacheBust;
+use Processboard\Helper\CacheBust;
 
 class App
 {
@@ -10,12 +10,27 @@ class App
     {
 
         //Init subset
-        new Admin\Settings();
+        //new Admin\Settings();
 
         //Register module
         add_action('plugins_loaded', array($this, 'registerModule'));
-
-        // Add view paths
+        
+        //Register post type
+        new \Processboard\Entity\PostType(__('Processer', 'modularity-processboard'), __('Processer', 'modularity-processboard'), 'process', array(
+            'description' => __('Process information', 'modularity-processboard'),
+            'menu_icon' => 'dashicons-list-view',
+            'public' => false,
+            'publicly_queriable' => false,
+            'show_ui' => true,
+            'show_in_nav_menus' => true,
+            'has_archive' => false,
+            'hierarchical' => true,
+            'exclude_from_search' => true,
+            'taxonomies' => array(),
+            'supports' => array('title', 'revisions', 'editor', 'page-attributes')
+        ));
+        
+                // Add view paths
         add_filter('Municipio/blade/view_paths', array($this, 'addViewPaths'), 1, 1);
     }
 
@@ -27,8 +42,8 @@ class App
     {
         if (function_exists('modularity_register_module')) {
             modularity_register_module(
-                {{BPREPLACECAPSCONSTANT}}_MODULE_PATH,
-                '{{BPREPLACESLUGCAMELCASE}}'
+                PROCESSBOARD_MODULE_PATH,
+                'Processboard'
             );
         }
     }
@@ -42,10 +57,10 @@ class App
     {
         // If child theme is active, insert plugin view path after child views path.
         if (is_child_theme()) {
-            array_splice($array, 2, 0, array({{BPREPLACECAPSCONSTANT}}_VIEW_PATH));
+            array_splice($array, 2, 0, array(PROCESSBOARD_VIEW_PATH));
         } else {
             // Add view path first in the list if child theme is not active.
-            array_unshift($array, {{BPREPLACECAPSCONSTANT}}_VIEW_PATH);
+            array_unshift($array, PROCESSBOARD_VIEW_PATH);
         }
 
         return $array;
