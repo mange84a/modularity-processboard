@@ -31,6 +31,28 @@
             "min": "",
             "max": "",
             "elements": ""
+        },
+        {
+            "key": "field_64218da448b31",
+            "label": "Niv\u00e5",
+            "name": "level",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Tvinga niv\u00e5n i grafen, l\u00e4mna tomt f\u00f6r standard",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [

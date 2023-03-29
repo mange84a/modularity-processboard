@@ -35,6 +35,28 @@
             'max' => '',
             'elements' => '',
         ),
+        1 => array(
+            'key' => 'field_64218da448b31',
+            'label' => __('Nivå', 'modularity-processboard'),
+            'name' => 'level',
+            'aria-label' => '',
+            'type' => 'number',
+            'instructions' => __('Tvinga nivån i grafen, lämna tomt för standard', 'modularity-processboard'),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'min' => '',
+            'max' => '',
+            'placeholder' => '',
+            'step' => '',
+            'prepend' => '',
+            'append' => '',
+        ),
     ),
     'location' => array(
         0 => array(

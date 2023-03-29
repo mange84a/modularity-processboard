@@ -33,7 +33,7 @@ class Processboard extends \Modularity\Module
         $data = array_merge($data, (array) \Modularity\Helper\FormatObject::camelCase(
             get_fields($this->ID)
         ));
-        
+
         $data['nodes'] = $this->getNodes($data['processCategory']);
         $data['connections'] = $this->getConnections($data['processCategory']);
     
@@ -99,12 +99,11 @@ class Processboard extends \Modularity\Module
             'post_type' => 'process',
             'posts_per_page' => -1,
             'post_status' => 'publish',
-            'orderby' => 'menu_order',
             'order' => 'ASC',
             'tax_query' => [[
                 'taxonomy' => 'process_group',
                 'field' => 'term_id', 
-                'terms' => $categoryId, /// Where term_id of Term 1 is "1".
+                'terms' => $categoryId, 
                 'include_children' => false
             ]]
         ]);
@@ -128,7 +127,6 @@ class Processboard extends \Modularity\Module
             'post_type' => 'process',
             'posts_per_page' => -1,
             'post_status' => 'publish',
-            'orderby' => 'menu_order',
             'order' => 'ASC',
             'tax_query' => [[
                 'taxonomy' => 'process_group',
@@ -140,12 +138,16 @@ class Processboard extends \Modularity\Module
         
         if (is_array($cards) && !empty($cards)) {
             foreach ($cards as $card) {
-                $nodes[] = [
+                $node = [
                     'id' => (string) $card->ID,
                     'description' => $card->post_content,
                     'name' => $card->post_title,
-                    'height' => 110,
                 ];
+                if($lvl = get_field('level', $card->ID)) {
+                    $node['level'] = $lvl;
+                }
+
+                $nodes[] = $node;             
             }
         }
         return $nodes;

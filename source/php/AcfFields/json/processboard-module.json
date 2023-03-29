@@ -27,6 +27,119 @@
                 "acfe_bidirectional_enabled": "0"
             },
             "multiple": 0
+        },
+        {
+            "key": "field_64218df5bd0db",
+            "label": "St\u00e5ende graf",
+            "name": "horizontal",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_64218e2ebd0dc",
+            "label": "H\u00f6jd",
+            "name": "chart_height",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64218e71c95c2",
+            "label": "Minsta bredd",
+            "name": "chart_width",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6421960579a21",
+            "label": "Linjestil",
+            "name": "linestyle",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Standard",
+                "straight": "Raka",
+                "curved": "Kurviga"
+            },
+            "default_value": "default",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6422a45eb4fba",
+            "label": "H\u00f6jd\/bredd p\u00e5 box",
+            "name": "node_width",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "H\u00f6jd p\u00e5 boxar i st\u00e5ende diagram samt bredd p\u00e5 boxar i liggande.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 110,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [

@@ -5,12 +5,24 @@ import HighchartsOrganization from "highcharts/modules/organization";
 HighchartsSankey(Highcharts);
 HighchartsOrganization(Highcharts);
 
+var wrapper = document.getElementById('chart_responsive');
 
+var chartHeight = wrapper.getAttribute('data-height');
+var chartWidth = wrapper.getAttribute('data-width');
+var isHorizontal = wrapper.getAttribute('data-orientation');
+var linestyle = wrapper.getAttribute('data-linestyle');
+var node_width = wrapper.getAttribute('data-node-width');
+
+if(isHorizontal == '1') {
+    isHorizontal = true;
+} else {
+    isHorizontal = false;
+}
 
 Highcharts.chart('container', {
     chart: {
-        height: 2000, //Make customizable
-        inverted: true, //Make customizable
+        height: chartHeight, 
+        inverted: isHorizontal,
         events: {
             click: function() {
             },
@@ -50,12 +62,14 @@ Highcharts.chart('container', {
         clip: false,
         borderColor: '#ffffff',
         colorByPoint: false,
-        nodeWidth: 110,
+        nodeWidth: node_width,
         borderRadius: 0,
-        enableMouseTracking: false,
+        //enableMouseTracking: false,
         link: {
-            type: 'curved',
-            lineWidth: 2
+            type: linestyle,
+            lineWidth: 2,
+            radius: 30,
+
         }
         ,
         keys: ['from', 'to'],
@@ -63,10 +77,10 @@ Highcharts.chart('container', {
         nodes: nodes,
         states: {
             hover: {
-                enabled: false
+                //enabled: false
             },
             inactive: {
-                opacity: 1
+                opacity: .3
             }
         },
     }],
