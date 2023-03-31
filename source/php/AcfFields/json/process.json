@@ -53,6 +53,50 @@
             "step": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_64240427b75bb",
+            "label": "Horisontell Offset",
+            "name": "offset_x",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Justera just detta blocks position i sidled +-",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64240467b75bc",
+            "label": "Vertikal Offset",
+            "name": "offset_y",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Justera just detta blocks position i H\u00f6jdled +-",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [

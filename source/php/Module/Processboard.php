@@ -146,6 +146,14 @@ class Processboard extends \Modularity\Module
                 if($lvl = get_field('level', $card->ID)) {
                     $node['level'] = $lvl;
                 }
+                
+                if($offsetX = get_field('offset_x', $card->ID)) {
+                    $node['offsetHorizontal'] = $offsetX . 'px';
+                }
+                
+                if($offsetY = get_field('offset_y', $card->ID)) {
+                    $node['offsetVertical'] = $offsetY . 'px';
+                }
 
                 $nodes[] = $node;             
             }
