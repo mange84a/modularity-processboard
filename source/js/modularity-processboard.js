@@ -38,6 +38,8 @@ Highcharts.chart('container', {
         },
     },
 
+    tooltip: { enabled: false },
+
     title: {
         text: null //Customizable
     },
@@ -57,7 +59,6 @@ Highcharts.chart('container', {
     series: [{
         type: 'organization',
         name: 'Processer2',
-        height: 110,
         color: '#ffffff',
         clip: false,
         borderColor: '#ffffff',
@@ -84,10 +85,6 @@ Highcharts.chart('container', {
             }
         },
     }],
-    tooltip: {
-        outside: true
-    },
-
 });
 
 setInterval(function () {
